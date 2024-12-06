@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Plant Website</title>
+<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./Css/all.min.css">
+    <link rel="stylesheet" href="./Css/output.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+<nav class="" id="Navbar">
+  <div class="">
+    <div class="antialiased bg-gray-100 dark:bg-gray-900">
+      <!-- text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800 -->
+    <div class="w-full dark:bg-gradient-to-r dark:from-gray-800 dark:to-sky-700
+    bg-gradient-to-tr from-purple-500 to-pink-600 
+   ">
+      <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="flex flex-row items-center justify-between p-4">
+          <img src="./assets/img/favicon.ico" alt="">
+          <a href="#" class=" text-white text-lg font-semibold tracking-widest  uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
+            Flowtrail UI</a>
+          <button  class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+          <a class="text-white px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Home">Home</a>
+          <a class="text-white  px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Activity">Activity</a>
+          <a class="text-white  px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Card">Card</a>
+          <a class="text-white  px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Slider">Slider</a>
+          <a class="text-white  px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Contact">Contact</a>
+          <a class="text-white  px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
+            <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+              <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+              <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+          </div>
+  
+          </a>
+
+      
+        </nav>
+      </div>
+    </div>
+  </div>
+    </div>
+</nav>
+
+  <!-- Sec1 -->
+  <header id="Home" class="py-8 bg-main dark:bg-gray-900 dark:text-white ">
+<div class="container py-8 mx-auto">
+  <div class="row-custom items-center ms-6">
+<div class=" w-full md:w-2/3 home-data">
+  <h1 class=" text-4xl font-bold text-gray-600 mb-3  dark:text-white">Manage Your Activity With<br/>
+     <span class="text-blue-700 dark:text-purple-600 test
+     font-bold">A</span></h1>
+     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum tempora expedita pariatur accusantium voluptates necessitatibus?</p>
+<button class=" bg-gradient-to-r from-blue-600
+ to-gray-300 py-3 px-8 rounded-lg
+ dark:bg-gradient-to-r
+ dark:from-purple-600
+ dark:to-gray-300
+ transition ease-in-out delay-150
+ hover:-translate-y-1 hover:scale-110
+ duration-300
+ text-white mt-5">Get Started To day</button>
+
+ <button class=" bg-transparent border-2 border-gray-950  py-3 px-8 rounded-lg
+ text-black mt-5  dark:text-white dark:border-white
+ transition ease-in-out delay-150
+ hover:-translate-y-1 hover:scale-110
+ duration-300 ms-6
+ ">Get Started To day</button>
+    </div>
+<div class=" w-full md:w-1/3">
+  <img src="./assets/img/home.png" class="w-full home-img" alt="">
+</div>
+  </div>
+
+</div>
+  </header>
+
+<!-- Sec2 -->
+ <section id="Activity" class="dark:bg-gray-700 dark:text-white">
+  <div class="container py-8 mx-auto">
+    <div class="row-custom items-center ">
+      <div class="w-full md:w-1/3  ">
+        <img src="./assets/img/home.png" class="w-full About_img" alt="">
+      </div>
+  <div class="w-full md:w-2/3 About_data">
+    <h1 class=" text-4xl font-bold text-gray-600 mb-3  dark:text-white">Manage Your Activity With<br>
+       <span class="text-blue-700 font-bold">Appexy</span></h1>
+       <p class="text-gray-500 dark:text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum tempora expedita pariatur accusantium voluptates necessitatibus?</p>
+      <div class="row-custom mt-5 items-center gap-5">
+        <span class="fa-stack fa-1x">
+          <i class="fa-solid fa-circle text-slate-50 drop-shadow-lg fa-stack-2x"></i>
+          <i class="fa-solid fa-flag text-slate-900 fa-stack-1x fa-inverse"></i>
+        </span>
+        <p class="item-center text-gray-600 text-lg font-light tracking-tight dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam dolores distinctio officiis. Nulla, repellendus porro?</p>
+      </div>
+      <div class="row-custom mt-5 items-center gap-5">
+        <span class="fa-stack fa-1x">
+          <i class="fa-solid fa-circle text-slate-50 drop-shadow-lg fa-stack-2x"></i>
+          <i class="fa-solid fa-flag text-slate-900 fa-stack-1x fa-inverse"></i>
+        </span>
+        <p class="item-center dark:text-white text-gray-600 text-lg font-light tracking-tight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam dolores distinctio officiis. Nulla, repellendus porro?</p>
+      </div>
+      <div class="row-custom mt-5 items-center gap-5">
+        <span class="fa-stack fa-1x">
+          <i class="fa-solid fa-circle text-slate-50 drop-shadow-lg fa-stack-2x"></i>
+          <i class="fa-solid fa-flag text-slate-900 fa-stack-1x fa-inverse"></i>
+        </span>
+        <p class="item-center dark:text-white text-gray-600 text-lg font-light tracking-tight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam dolores distinctio officiis. Nulla, repellendus porro?</p>
+      </div>
+      <div class="row-custom mt-5 items-center gap-5">
+        <span class="fa-stack fa-1x">
+          <i class="fa-solid fa-circle text-slate-50 drop-shadow-lg fa-stack-2x"></i>
+          <i class="fa-solid fa-flag text-slate-900 fa-stack-1x fa-inverse"></i>
+        </span>
+        <p class="item-center dark:text-white text-gray-600 text-lg font-light tracking-tight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam dolores distinctio officiis. Nulla, repellendus porro?</p>
+      </div>
+    
+
+
+      </div>
+  
+    </div>
+  
+  </div>
+   </section>
+<!-- Sec 3 -->
+ <div id="Card" class=" flex-none md:flex justify-around 
+ dark:bg-gradient-to-r dark:from-gray-800 dark:to-sky-900
+ bg-gradient-to-tr from-purple-500 to-pink-600 
+
+ ">
+  <div class="w-full md:w-1/4 card  transition ease-in-out delay-150
+  hover:-translate-y-1 hover:scale-110
+  duration-300  mt-5 mb-5 shadow-xl
+   dark:bg-gray-700 dark:text-white
+ bg-gradient-to-tr from-purple-200 to-pink-200 
+ text-white
+   ">
+    <figure>
+      <img src="./assets/img/cart-1.png" alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">planting</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn  btn-accent ">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class=" w-full md:w-1/4 card transition ease-in-out delay-150
+  hover:-translate-y-1 hover:scale-110
+  duration-300  mt-5  mb-5 shadow-xl
+   dark:bg-gray-700 dark:text-white
+   bg-gradient-to-tr from-purple-200 to-pink-200 
+   text-white  
+   ">
+    <figure>
+      <img src="./assets/img/cart-4.png" alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">planting</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn  btn-accent ">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="w-full md:w-1/4 card transition ease-in-out delay-150
+  hover:-translate-y-1 hover:scale-110
+  duration-300 mt-5 me-5 mb-5 shadow-xl
+   dark:bg-gray-700 dark:text-white
+   bg-gradient-to-tr from-purple-200 to-pink-200 
+   text-white  
+   ">
+    <figure>
+      <img src="./assets/img/cart-3.png" alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">planting</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-accent 
+        ">Buy Now</button>
+      </div>
+    </div>
+</div>
+  </div>
+
+ <!-- Sec4 -->
+ <section id="Slider" class="
+ bg-gradient-to-tr from-purple-500 to-pink-600 
+ dark:bg-gradient-to-r dark:from-gray-600 dark:to-sky-600
+ Slider
+ 
+ ">
+  <div class="container mx-auto ">
+    <div class="w-2/3 mx-auto">
+
+      <div class="carousel mt-6 mb-10">
+          <div id="item1" class="carousel-item w-full">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+              class="w-full" alt="" />
+          </div>
+          <div id="item2" class="carousel-item w-full">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+              class="w-full" alt="" />
+          </div>
+          <div id="item3" class="carousel-item w-full">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+              class="w-full" alt="" />
+          </div>
+          <div id="item4" class="carousel-item w-full">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+              class="w-full" alt="" />
+          </div>
+        </div>
+          
+        </div>
+        <div class="flex w-full justify-center gap-2 py-2 pb-5">
+          <a href="#item1" class="  btn btn-xs">1</a>
+          <a href="#item2" class="btn btn-xs">2</a>
+          <a href="#item3" class="btn btn-xs">3</a>
+          <a href="#item4" class="btn btn-xs">4</a>
+        </div>
+  </div>
+
+</section>
+<!-- Sec5 -->
+<section id="Contact" class=" dark:text-white
+dark:bg-gradient-to-r dark:from-gray-600 dark:to-sky-900
+ bg-gradient-to-tr from-purple-500 to-pink-600 
+
+">
+  <div class="container py-8 mx-auto">
+    <div class="row-custom items-center ">
+      <div class="w-full md:w-1/3  ">
+        <img src="./assets/img/hero.png" class="w-full Contact_img" alt="">
+      </div>
+  <div class="w-full md:w-1/3 Contact">
+    <label class="input input-bordered input-primary mb-5
+     flex items-center text-black
+      gap-2 ">
+      Name:
+      <input type="text" class="grow" placeholder="FristName" />
+    </label>
+    <label class="input input-bordered input-primary mb-5  text-black flex items-center gap-2">
+      Email:
+      <input type="text" class="grow" placeholder="daisy@site.com" />
+    </label>
+    <div class="flex items-center gap-2">
+      <label class="  text-black 
+      dark:text-white 
+      text-lg">
+        Comment :
+      </label>
+      <textarea name="Message"
+      class="input input-bordered input-primary py-8 mb-5 "
+      style="resize: none;"
+      cols="45" 
+      ></textarea>
+    </div>
+ 
+
+
+      </div>
+  
+    </div>
+  
+  </div>
+ </section>
+
+<!-- Footer -->
+<footer class="footer
+dark:bg-gradient-to-r dark:from-gray-800 dark:to-sky-700
+ bg-gradient-to-tr from-purple-500 to-pink-600 
+bg-neutral text-neutral-content p-10  ">
+  <nav class="Footer">
+    <h6 class="footer-title">Services</h6>
+    <a class="link link-hover">Branding</a>
+    <a class="link link-hover">Design</a>
+    <a class="link link-hover">Marketing</a>
+    <a class="link link-hover">Advertisement</a>
+  </nav>
+  <nav class="Footer">
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Jobs</a>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav class="Footer">
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+    <a class="link link-hover">Cookie policy</a>
+  </nav>
+</footer>
+
+<a href="" class="fixed right-4 -bottom-1/2
+ bg-yellow-500 shadow-sm
+ px-3 py-1 md:px-4 md:py-2 rounded-md
+ text-lg inline-block z-50 
+ hover:translate-y-1 duration-300" 
+ id="scroll-up"
+ >
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="./assets/js/scrollreveal.min.js"></script>
+<script src="./Js/main.js"></script>
+</body>
+
+</html>

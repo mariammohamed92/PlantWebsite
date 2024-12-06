@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  @apply overflow-x-hidden scroll-smooth;
+}
+.toggle-checkbox:checked {
+    @apply right-0 border-green-400;
+    right: 0;
+    border-color: #68D391;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply bg-green-400;
+    background-color: #68D391;
+  }
+  
+
+.row-custom{
+    @apply flex flex-wrap
+}
+
+.test::after
+{
+    content: "|";
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes typing {
+    0%{content: "|";}
+    10%{content: "P|";}
+    20%{content: "PP|";}
+    30%{content: "PPe|";}
+    40%{content: "PPex|";}
+    50%{content: "PPexy|";}
+    60%{content: "PPex|";}
+    70%{content: "PPe|";}
+    80%{content: "PP|";}
+    90%{content: "P|";}
+100%{content: "|";}
+
+}
+
